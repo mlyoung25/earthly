@@ -1,3 +1,15 @@
+.color-primary {
+  color: #51b55d;
+}
+
+.color-secondary {
+  color: gray;
+}
+
+.color-tertiary {
+  color: #18453B;
+}
+
 .App {
   text-align: center;
 }
@@ -22,6 +34,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Futura';
+}
+
+.home-header {
+  height: auto;
+  font-family: 'Futura';
 }
 
 .App-link {
@@ -36,3 +54,46 @@
     transform: rotate(360deg);
   }
 }
+
+
+ /* podium */
+#podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  position: relative;
+}
+
+.step {
+  width: 200px;
+  margin: 10px;
+  background-color: #51b55d;
+  position: relative;
+  bottom: 0;
+  margin-right: -10px;
+}
+
+.var-name {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+#first {
+  height: 300px;
+}
+
+#second {
+  height: 200px;
+}
+
+#third {
+  height: 100px;
+}
+/* end podium */
+
+

@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import Nav from './comps/Nav';
+import { supabase } from './supabaseClient';
+import React, { useState, useEffect } from "react";
+import Auth from './pages/Auth'
+import pages from './pages/routes';
 
 function App() {
+  const [session, setSession] = useState(null)
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session)
+    })
+
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session)
+    })
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <main className="container">
+          <Nav />
+          <article class="container">
+            <Routes>
+              {pages.map(({ location, comp }) =>
+                <Route exact element={comp} path={'/' + location.split('/').pop()} />)}
+            </Routes>
+          </article>
+        </main>
+      </div>
+    </Router>
   );
 }
 

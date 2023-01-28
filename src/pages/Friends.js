@@ -1,0 +1,23 @@
+import '../App.css';
+
+export default function Friends() {
+    return (<div>
+            <main>
+                <h1>
+                    Weekly Leaderboard: 
+                </h1>
+                <div id="podium">
+                    <div className="step" id="second">
+                         <p className="var-name">Variable 1</p>
+                    </div>
+                    <div className="step" id="first">
+                        <p className="var-name">Variable 2</p>
+                        <img src="/imgs/first_place.jpg" class="overlay-image" alt="overlay image"></img>
+                    </div>
+                    <div className="step" id="third">
+                        <p className="var-name">Variable 3</p>
+                    </div>
+                </div>
+            </main>
+    </div>)
+}
