@@ -7,6 +7,7 @@ export default function Home() {
     // const [miles, setMiles] = useState(0)
     const mileRef = useRef()
     const [trips, setTrips] = useState([])
+    const [allTrips, setAllTrips] = useState([])
     const [total, setTotal] = useState(0)
     const [modelOpen, setModelOpen] = useState(false)
     let deleteTrip = async (id) => {
@@ -29,9 +30,15 @@ export default function Home() {
         setTotal(data.map(({ miles }) => miles).reduce((partialSum, a) => partialSum + a, 0))
         setTrips(() => data)
     }
+    let getAllTrips = async (everyone=true) => {
+        const id = await (await supabase.auth.getUser()).data.user.id
+        const { data, error } = await supabase.from("trips").select()[everyone? "neq" : "eq"]("uuid",id)
+        setAllTrips(() => data)
+    }
     useEffect(() => {
         async function init() {
             await getTrips()
+            await getAllTrips()
         }
         init()
     }, [])
@@ -118,8 +125,12 @@ export default function Home() {
                     <h1>
                         Recent Activity:
                     </h1>
-                </div>
-            </main>
+                    {allTrips.slice(0,5).reverse().map((trip) => <div style={{paddingLeft: "15%", paddingRight: "15%"}}> <h6 style={{backgroundColor: "#18453b"}}>uuid saved {conversions.co2(trip.miles).toFixed(2)} pounds of CO2 with a {trip.miles} mile trip on 
+                    <br></br>
+                    {new Date(trip.created_at).toDateString() + " " + new Date(trip.created_at).toLocaleTimeString() }</h6>
+</div>)}
+</div>
+                     </main>
         </body>
     </div>)
 }
