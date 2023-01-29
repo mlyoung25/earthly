@@ -1,5 +1,5 @@
 import '../App.css';
-import { conversions } from "../utils";
+import { conversions, utils } from "../utils";
 import { supabase } from '../supabaseClient'
 import { useState, useRef, useEffect } from 'react';
 
@@ -12,20 +12,20 @@ export default function Home() {
     let deleteTrip = async (id) => {
         const uid = await (await supabase.auth.getUser()).data.user.id
         const { data, error } = await supabase.from("trips")
-        .delete().eq("uuid", uid).eq("id", id)
+            .delete().eq("uuid", uid).eq("id", id)
         if (error) {
             return alert(error.message)
         }
         if (data) {
-            alert("Deleted trip")
         }
+        alert("Deleted trip")
         await getTrips()
 
     }
     // const [data, setData] = useState({})
-    let getTrips = async (everyone=false) => {
+    let getTrips = async (everyone = false) => {
         const id = await (await supabase.auth.getUser()).data.user.id
-        const { data, error } = await supabase.from("trips").select()[everyone? "neq" : "eq"]("uuid",id)
+        const { data, error } = await supabase.from("trips").select()[everyone ? "neq" : "eq"]("uuid", id)
         setTotal(data.map(({ miles }) => miles).reduce((partialSum, a) => partialSum + a, 0))
         setTrips(() => data)
     }
@@ -60,8 +60,8 @@ export default function Home() {
     return (<div>
         <body>
             <main>
-                <div style={{paddingRight: "30%", paddingLeft: "30%"}}>
-                <button type="submit" onClick={() => setModelOpen(true)}>Log your recent trip</button>
+                <div style={{ paddingRight: "30%", paddingLeft: "30%" }}>
+                    <button type="submit" onClick={() => setModelOpen(true)}>Log your recent trip</button>
                 </div>
                 {modelOpen && <dialog open>
                     <article>
@@ -74,7 +74,7 @@ export default function Home() {
 
                     </article>
                 </dialog>}
-                <br/>
+                <br />
                 <div>
                     <h1 className="home-header">
                         You've saved {(conversions.co2(total)).toFixed(1)} pounds of CO2!
@@ -110,10 +110,13 @@ export default function Home() {
                     <h1>
                         History:
                     </h1>
-                        {trips.map((trip) => <div style={{paddingLeft: "15%", paddingRight: "15%"}}> <h6 style={{backgroundColor: "#18453b"}}>{trip.miles} miles on {new Date(trip.created_on).toDateString() + " " + new Date(trip.created_on).toLocaleTimeString() }</h6>
-                            <button onClick={(e)=>deleteTrip(trip.id)}>Delete</button>
-<br/></div>)}
-</div>
+                    {trips.map((trip) => <div style={{ paddingLeft: "15%", paddingRight: "15%" }}>
+                        <h6 style={{ backgroundColor: "#18453b" }}>
+                            {trip.miles} miles on {new Date(trip.created_at).toDateString() + " " + new Date(trip.created_at).toLocaleTimeString()}
+                        </h6>
+                        <button onClick={(e) => deleteTrip(trip.id)}>Delete</button>
+                        <br /><hr/></div>)}
+                </div>
                 <div>
                     <h1>
                         Recent Activity:
