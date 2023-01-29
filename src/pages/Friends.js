@@ -3,6 +3,7 @@ import '../App.css';
 
 export default function Friends() {
     const [modalOpen, setModalOpen] = useState(false);
+    const [inputValue, setInputValue] = useState('');
 
     return (
         <div>
@@ -32,11 +33,18 @@ export default function Friends() {
                     <li>Fourth item</li>
                     <li>Fifth item</li>
                 </ol>
-                <button onClick={() => setModalOpen(true)}>Open Modal</button>
+                <button onClick={() => setModalOpen(true)}>Find Friends</button>
                 {modalOpen && (
                     <dialog open>
                         <article>
-                        <p>Modal Content Goes Here</p>
+                        <p style={{marginBottom: 10}}>Search</p>
+                        <div>
+                            <input
+                                type='text'
+                                value={inputValue}
+                                onChange={e => setInputValue(e.target.value)}
+                            />
+                        </div>
                         <button onClick={() => setModalOpen(false)}>Close</button>
                         </article>
                     </dialog>
