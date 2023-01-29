@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../App.css';
 import { supabase } from '../supabaseClient';
-import { utils } from '../utils';
+import { conversions, utils } from '../utils';
 
 export default function Friends() {
     const [modalOpen, setModalOpen] = useState(false);
@@ -56,7 +56,7 @@ export default function Friends() {
                 }
                 <hr/>
                 <ol>
-                    {Object.entries(podium).map(([k, v]) => <li key={k}>{k} with {v} miles</li>)}
+                    {Object.entries(podium).map(([k, v]) => <li key={k}>{k} with {conversions.co2(v).toFixed(1)} lbs CO2</li>)}
                 </ol>
               
             </main>
