@@ -12,7 +12,7 @@ export default function Friends() {
                     </div>
                     <div className="step" id="first">
                         <p className="var-name">Variable 2</p>
-                        <img src="/imgs/first_place.jpg" class="overlay-image" alt="overlay image"></img>
+                        <img src="/imgs/first_place.svg" class="overlay-image"></img>
                     </div>
                     <div className="step" id="third">
                         <p className="var-name">Variable 3</p>
