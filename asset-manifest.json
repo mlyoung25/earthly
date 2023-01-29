@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.8f8fd3f4.css",
-    "main.js": "/static/js/main.99bdc680.js",
-    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/Futura.ttf": "/static/media/Futura.4e762c29ef7b44ca51cb.ttf",
-    "index.html": "/index.html",
-    "main.8f8fd3f4.css.map": "/static/css/main.8f8fd3f4.css.map",
-    "main.99bdc680.js.map": "/static/js/main.99bdc680.js.map",
-    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+    "main.css": "./static/css/main.ae04e9e9.css",
+    "main.js": "./static/js/main.a4cf272f.js",
+    "static/js/787.c4e7f8f9.chunk.js": "./static/js/787.c4e7f8f9.chunk.js",
+    "static/media/Futura.ttf": "./static/media/Futura.4e762c29ef7b44ca51cb.ttf",
+    "index.html": "./index.html",
+    "main.ae04e9e9.css.map": "./static/css/main.ae04e9e9.css.map",
+    "main.a4cf272f.js.map": "./static/js/main.a4cf272f.js.map",
+    "787.c4e7f8f9.chunk.js.map": "./static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f8fd3f4.css",
-    "static/js/main.99bdc680.js"
+    "static/css/main.ae04e9e9.css",
+    "static/js/main.a4cf272f.js"
   ]
 }
