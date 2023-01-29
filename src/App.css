@@ -96,4 +96,49 @@
 }
 /* end podium */
 
+/* begin challenge */
 
+/*challenge options*/
+.challenges-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.challenge {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.completed {
+  background-color: #f2f2f2;
+}
+
+.completed .btn-complete {
+  display: none;
+}
+
+.btn-complete {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.challenge-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.challenge-description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+
+  
+
+/* end challenge */
