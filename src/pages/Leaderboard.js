@@ -36,7 +36,7 @@ export default function Friends() {
         <div>
             <main>
                 <h1>
-                    Local Leaderboard:
+                    Local Leaderboard
                 </h1>
 
                 {Object.keys(podium).length === 0 ? <progress /> : <div id="podium">
@@ -58,22 +58,7 @@ export default function Friends() {
                 <ol>
                     {Object.entries(podium).map(([k, v]) => <li key={k}>{k} with {v} miles</li>)}
                 </ol>
-                <button onClick={() => setModalOpen(true)}>Find Friends</button>
-                {modalOpen && (
-                    <dialog open>
-                        <article>
-                            <p style={{ marginBottom: 10 }}>Search</p>
-                            <div>
-                                <input
-                                    type='text'
-                                    value={inputValue}
-                                    onChange={e => setInputValue(e.target.value)}
-                                />
-                            </div>
-                            <button onClick={() => setModalOpen(false)}>Close</button>
-                        </article>
-                    </dialog>
-                )}
+              
             </main>
         </div>
     );

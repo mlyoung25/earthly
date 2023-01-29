@@ -1,5 +1,5 @@
 import '../App.css';
-
+// @deprecated
 export default function Challenges() {
     return (<div>
             <main>
