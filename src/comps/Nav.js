@@ -14,8 +14,6 @@ export default function Nav({ children }) {
                     !hidden &&
                     <li key={location}><Link to={'/' + location.split('/').pop()}>{utils.parseLocationStr(location)}</Link></li>
                 )}
-            </ul>
-            <ul>
                 <li>{children}</li>
             </ul>
         </nav>
