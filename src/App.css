@@ -117,3 +117,18 @@ ol {
   -webkit-filter: invert(.75); /* safari 6.0 - 9.0 */
           filter: invert(.75);
 }
+
+.all-imgs {
+  display: flex;
+}
+
+.img-with-caption {
+  width: 50%; /* adjust as needed */
+  text-align: center;
+  margin-right: 50px;
+}
+
+.img-with-caption img {
+  width: 100%;
+  height: auto;
+}
