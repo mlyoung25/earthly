@@ -119,7 +119,7 @@ export default function Home() {
                 </div>
                 <div style={{ padding: "50px" }}>
                     <h1>
-                        History:
+                        History
                     </h1>
                     {trips.reverse().map((trip) => <div style={{ paddingLeft: "15%", paddingRight: "15%" }}>
                         <h6 style={{ backgroundColor: "#18453b" }}>
@@ -130,7 +130,7 @@ export default function Home() {
                 </div>
                 <div>
                     <h1>
-                        Recent Activity:
+                        Recent Activity
                     </h1>
                     {allTrips.length == 0 ? <progress/> : 
                     allTrips.slice(0,5).reverse().map(({miles, users, created_at}) => <div style={{paddingLeft: "15%", paddingRight: "15%"}}> <h6 style={{backgroundColor: "#18453b"}}>{users?.email} saved {conversions.co2(miles).toFixed(2)} pounds of CO2 with a {miles} mile trip on 
