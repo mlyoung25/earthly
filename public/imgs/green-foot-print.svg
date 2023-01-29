@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="svg4802"
+    sodipodi:docname="footprint.svg"
+    viewBox="0 0 64 64"
+    version="1.1"
+    inkscape:version="0.48.0 r9654"
+  >
+  <title
+      id="title2988"
+    >green footprint</title
+  >
+  <sodipodi:namedview
+      id="base"
+      bordercolor="#666666"
+      inkscape:pageshadow="2"
+      inkscape:window-y="-4"
+      pagecolor="#ffffff"
+      inkscape:window-height="712"
+      inkscape:grid-bbox="true"
+      inkscape:window-maximized="1"
+      inkscape:zoom="5.5"
+      inkscape:window-x="-4"
+      showgrid="true"
+      borderopacity="1.0"
+      inkscape:current-layer="layer1"
+      inkscape:cx="32"
+      inkscape:cy="32"
+      inkscape:window-width="1280"
+      inkscape:pageopacity="0.0"
+      inkscape:document-units="px"
+  />
+  <g
+      id="layer1"
+      inkscape:label="Layer 1"
+      inkscape:groupmode="layer"
+    >
+    <path
+        id="path4790"
+        d="m18.157 26.334c-0.19606-6.0249 4.9919-9.6573 9.4931-11.039 4.5965-1.4105 10.708 1.3151 12.217 6.8386 1.6698 6.1122-5.9846 9.3738-5.9422 16.098 0.0318 5.032 5.7323 11.392 4.5703 16.367-0.53525 2.2915-2.8164 3.7707-4.5782 4.1896-1.5689 0.37306-3.2471-0.42678-4.3552-1.7259-2.511-2.945-2.431-8.463-4.041-12.397-2.3-5.62-7.165-12.218-7.364-18.332z"
+        sodipodi:nodetypes="sssssssss"
+        style="stroke:#000000;stroke-width:.041261px;fill:#66cc33"
+        inkscape:connector-curvature="0"
+    />
+    <path
+        id="path4792"
+        sodipodi:rx="109.09647"
+        sodipodi:ry="131.31982"
+        style="stroke-linejoin:bevel;stroke:#445a26;stroke-linecap:round;stroke-width:0.3;fill:#66cc33"
+        sodipodi:type="arc"
+        d="m-1466.7-392.16a109.1 131.32 0 1 1 -218.19 0 109.1 131.32 0 1 1 218.19 0z"
+        transform="matrix(.038459 -.0029015 -.00049525 .042391 97.409 21.208)"
+        sodipodi:cy="-392.15594"
+        sodipodi:cx="-1575.838"
+    />
+    <path
+        id="path4794"
+        sodipodi:rx="109.09647"
+        sodipodi:ry="131.31982"
+        style="stroke-linejoin:bevel;stroke:#445a26;stroke-linecap:round;stroke-width:0.3;fill:#66cc33"
+        sodipodi:type="arc"
+        d="m-1466.7-392.16a109.1 131.32 0 1 1 -218.19 0 109.1 131.32 0 1 1 218.19 0z"
+        transform="matrix(.021709 -.0027518 -.00095646 .026420 63.201 15.658)"
+        sodipodi:cy="-392.15594"
+        sodipodi:cx="-1575.838"
+    />
+    <path
+        id="path4796"
+        sodipodi:rx="109.09647"
+        sodipodi:ry="131.31982"
+        style="stroke-linejoin:bevel;stroke:#445a26;stroke-linecap:round;stroke-width:0.3;fill:#66cc33"
+        sodipodi:type="arc"
+        d="m-1466.7-392.16a109.1 131.32 0 1 1 -218.19 0 109.1 131.32 0 1 1 218.19 0z"
+        transform="matrix(.018973 -.0024050 -.00083591 .023090 53.611 16.851)"
+        sodipodi:cy="-392.15594"
+        sodipodi:cx="-1575.838"
+    />
+    <path
+        id="path4798"
+        sodipodi:rx="109.09647"
+        sodipodi:ry="131.31982"
+        style="stroke-linejoin:bevel;stroke:#445a26;stroke-linecap:round;stroke-width:0.3;fill:#66cc33"
+        sodipodi:type="arc"
+        d="m-1466.7-392.16a109.1 131.32 0 1 1 -218.19 0 109.1 131.32 0 1 1 218.19 0z"
+        transform="matrix(.017605 -.0022316 -.00077563 .021425 46.685 20.2)"
+        sodipodi:cy="-392.15594"
+        sodipodi:cx="-1575.838"
+    />
+    <path
+        id="path4800"
+        sodipodi:rx="109.09647"
+        sodipodi:ry="131.31982"
+        style="stroke-linejoin:bevel;stroke:#445a26;stroke-linecap:round;stroke-width:0.3;fill:#66cc33"
+        sodipodi:type="arc"
+        d="m-1466.7-392.16a109.1 131.32 0 1 1 -218.19 0 109.1 131.32 0 1 1 218.19 0z"
+        transform="matrix(.013228 -.0016768 -.00058278 .016098 36.49 23.246)"
+        sodipodi:cy="-392.15594"
+        sodipodi:cx="-1575.838"
+    />
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >green foot print</dc:title
+        >
+        <dc:date
+          >2011-08-12T08:31:57</dc:date
+        >
+        <dc:description
+        />
+        <dc:source
+          >https://openclipart.org/detail/154843/gree-foot-print-by-netalloy</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >netalloy</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >foot print</rdf:li
+            >
+            <rdf:li
+              >footprint</rdf:li
+            >
+            <rdf:li
+              >green footprint</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>
