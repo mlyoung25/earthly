@@ -9,11 +9,23 @@ export default function Home() {
     const [trips, setTrips] = useState([])
     const [total, setTotal] = useState(0)
     const [modelOpen, setModelOpen] = useState(false)
+    let deleteTrip = async (id) => {
+        const uid = await (await supabase.auth.getUser()).data.user.id
+        const { data, error } = await supabase.from("trips")
+        .delete().eq("uuid", uid).eq("id", id)
+        if (error) {
+            return alert(error.message)
+        }
+        if (data) {
+            alert("Deleted trip")
+        }
+        await getTrips()
 
+    }
     // const [data, setData] = useState({})
-    let getTrips = async () => {
+    let getTrips = async (everyone=false) => {
         const id = await (await supabase.auth.getUser()).data.user.id
-        const { data, error } = await supabase.from("trips").select().eq("uuid", id)
+        const { data, error } = await supabase.from("trips").select()[everyone? "neq" : "eq"]("uuid",id)
         setTotal(data.map(({ miles }) => miles).reduce((partialSum, a) => partialSum + a, 0))
         setTrips(() => data)
     }
@@ -27,7 +39,7 @@ export default function Home() {
         let miles = mileRef.current?.value
         e.preventDefault();
         if (!miles) {
-            return alert("Please enter a valid milage.")
+            return alert("Please enter your milage.")
         }
         if (miles <= 0) {
             return alert("Please enter a positive milage.")
@@ -41,6 +53,7 @@ export default function Home() {
         }
         if (data) {
             console.log(data)
+            alert("Created trip")
         }
         await getTrips() // refresh with new trips
     }
@@ -94,8 +107,12 @@ export default function Home() {
                     <h1>
                         History:
                     </h1>
-                        {trips.map((trip) => <ul ><article className="color-primary" style={{height: "10px", backgroundColor: "#18453b"}}>{trip.miles} miles on {new Date(trip.created_on).toDa}</article></ul>)}
-                    
+                    {trips.map((trip) => <ul>
+                        <article className="color-primary" style={{ height: "10px", backgroundColor: "#18453b" }}>
+                            {trip.miles} miles on {new Date(trip.created_on).toDateString()} 
+                            <button onClick={(e)=>deleteTrip(trip.id)}>Delete</button>
+                        </article></ul>)}
+
                 </div>
                 <div style={{ padding: "100px" }}>
                     <h1>
