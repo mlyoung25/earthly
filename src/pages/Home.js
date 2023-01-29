@@ -18,19 +18,19 @@ export default function Home() {
                 <div className="grid">
                     <div>
                         <h3> 'variable / 4500' lightbulbs </h3>
-                        <img src="/imgs/lightbulb-on-svgrepo-com.svg" height="70%" width="70%" alt="Lightbulbs" />
+                        <img src="/imgs/lightbulb-on-svgrepo-com.svg" height="70%" width="70%" filter= "invert(100%)" alt="Lightbulbs" />
                     </div>
                     <div>
                         <h3> 'variable / 155' pounds of beef </h3>
-                        <img src="/imgs/steak-4-svgrepo-com.svg" height="70%" width="70%" alt="Pounds of Beef" />
+                        <img src="/imgs/steak-4-svgrepo-com.svg" height="70%" width="70%" filter= "invert(100%)" alt="Pounds of Beef" />
                     </div>
                     <div>
                         <h3> 'variable / 109' flights </h3>
-                        <img src="/imgs/Airplane_silhouette.svg" height="70%" width="70%" alt="Flights" />
+                        <img src="/imgs/Airplane_silhouette.svg" height="70%" width="70%" filter= "invert(100%)" alt="Flights" />
                     </div>
                     <div>
                         <h3> 'variable / 20' gallons of gas </h3>
-                        <img src="/imgs/gas-station-svgrepo-com.svg" height="70%" width="70%" alt="Gallon of Gas" />
+                        <img src="/imgs/gas-station-svgrepo-com.svg" height="70%" width="70%" filter= "invert(100%)" alt="Gallon of Gas" />
                     </div>
                 </div>
             </main>
