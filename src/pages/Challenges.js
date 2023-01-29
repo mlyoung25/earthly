@@ -1,4 +1,6 @@
 import '../App.css';
+import "./Home.js"
+
 export default function Challenges() {
     const tempval = 50;
     return (<div>
