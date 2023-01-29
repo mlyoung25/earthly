@@ -16,6 +16,6 @@ export const utils = {
 }
 
 export const conversions = {
-    co2: (miles) => (miles / 0.890668),
+    co2: (miles) => (miles * 0.77),
 
 }
