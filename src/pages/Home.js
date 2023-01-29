@@ -60,7 +60,9 @@ export default function Home() {
     return (<div>
         <body>
             <main>
+                <div style={{paddingRight: "30%", paddingLeft: "30%"}}>
                 <button type="submit" onClick={() => setModelOpen(true)}>Log your recent trip</button>
+                </div>
                 {modelOpen && <dialog open>
                     <article>
                         <h1 className='secondary'>
@@ -72,7 +74,8 @@ export default function Home() {
 
                     </article>
                 </dialog>}
-                <div style={{ padding: "100px" }}>
+                <br/>
+                <div>
                     <h1 className="home-header">
                         You've saved {(conversions.co2(total)).toFixed(1)} pounds of CO2!
                     </h1>
@@ -103,20 +106,17 @@ export default function Home() {
                         <img className="svg" src="/imgs/gas-station-svgrepo-com.svg" height="70%" width="70%" filter="invert(100%)" alt="Gallon of Gas" />
                     </div>
                 </div>
-                <div style={{ padding: "100px" }}>
+                <div style={{ padding: "50px" }}>
                     <h1>
                         History:
                     </h1>
-                    {trips.map((trip) => <ul>
-                        <article className="color-primary" style={{ height: "10px", backgroundColor: "#18453b" }}>
-                            {trip.miles} miles on {new Date(trip.created_on).toDateString()} 
+                        {trips.map((trip) => <div style={{paddingLeft: "15%", paddingRight: "15%"}}> <h6 style={{backgroundColor: "#18453b"}}>{trip.miles} miles on {new Date(trip.created_on).toDateString() + " " + new Date(trip.created_on).toLocaleTimeString() }</h6>
                             <button onClick={(e)=>deleteTrip(trip.id)}>Delete</button>
-                        </article></ul>)}
-
-                </div>
-                <div style={{ padding: "100px" }}>
+<br/></div>)}
+</div>
+                <div>
                     <h1>
-                        Friends Activity:
+                        Recent Activity:
                     </h1>
                 </div>
             </main>

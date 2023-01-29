@@ -117,3 +117,8 @@ ol {
   -webkit-filter: invert(.75); /* safari 6.0 - 9.0 */
           filter: invert(.75);
 }
+
+h6 {
+  padding: 25px;
+  border-radius: 15px;
+}
