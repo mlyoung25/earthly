@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import '../App.css';
 
 export default function Friends() {
-    return (<div>
+    const [modalOpen, setModalOpen] = useState(false);
+
+    return (
+        <div>
             <main>
                 <h1>
                     Weekly Leaderboard: 
@@ -21,6 +25,23 @@ export default function Friends() {
                     </div>
                 </div>
                 <div id="horizontal-bar"></div>
+                <ol>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    <li>Fourth item</li>
+                    <li>Fifth item</li>
+                </ol>
+                <button onClick={() => setModalOpen(true)}>Open Modal</button>
+                {modalOpen && (
+                    <dialog open>
+                        <article>
+                        <p>Modal Content Goes Here</p>
+                        <button onClick={() => setModalOpen(false)}>Close</button>
+                        </article>
+                    </dialog>
+                )}
             </main>
-    </div>)
+        </div>
+    );    
 }

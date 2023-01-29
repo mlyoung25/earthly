@@ -107,6 +107,11 @@
   margin-top: 20px;
 }
 
+ol {
+  list-style-position: inside;
+}
+
+
 /* end podium */
 
 
