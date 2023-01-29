@@ -11,6 +11,7 @@ import { supabase } from './supabaseClient';
 import React, { useState, useEffect } from "react";
 import Auth from './pages/Auth'
 import pages from './pages/routes';
+import Home from './pages/Home';
 
 function App() {
   const [session, setSession] = useState(null)
