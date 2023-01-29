@@ -2,16 +2,14 @@ import { useState } from 'react';
 import '../App.css';
 
 export default function Reduce() {
-    const [modalOpen, setModalOpen] = useState(false);
-    const [inputValue, setInputValue] = useState('');
 
     return (
         <div>
             <main>
                 <h1>Ways to Reduce Your Carbon Footprint</h1>
                 <h4>Traveling green isn't the only thing you can do!</h4>
-                <div className='all-imgs'>
-                    <div className='img-with-caption'>
+                <div className='grid'>
+                    <div>
                         <img src="/imgs/light-bulb-svgrepo-com.svg"></img>
                         <p>The energy used to power lights often comes from burning fossil fuels like coal, 
                             natural gas, and oil, which releases carbon dioxide (CO2) and other greenhouse 
@@ -19,16 +17,16 @@ export default function Reduce() {
                             reduces the amount of energy that needs to be generated, which in turn can 
                             reduce your carbon footprint.</p>
                     </div>
-                    <div className='img-with-caption'>
+                    <div>
                         <img src="/imgs/air-conditioning-air-conditioner-svgrepo-com.svg"></img>
-                        <p>Similar to lights, Air conditioners increase your carbon footprint 
+                        <p> Air conditioners increase your carbon footprint 
                             because they use a lot of energy, which often comes from burning 
                             fossil fuels like coal, natural gas, and oil. To use your air conditioner
                             in a more environmentally friendly way you can look for environmentally
                             friendly air conditioners, use a programmable thermostat, and keep
                             your air conditioner clean.</p>
                     </div>
-                    <div className='img-with-caption'>
+                    <div>
                         <img src="/imgs/ghost-svgrepo-com.svg"></img>
                         <p>Phantom power refers to the electricity that is consumed by electronic 
                             devices when they are turned off or in standby mode. This happens 
