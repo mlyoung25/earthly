@@ -138,6 +138,16 @@
   margin-bottom: 20px;
 }
 
+.acceptButton {
+  width: 40%;
+  height: 50px;
+  text-align: center;
+}
+
+.ChallengeName {
+  text-align: left;
+  font-size: 20px;
+}
 
   
 

@@ -30,8 +30,8 @@ function ChallengeSection() {
       <h1>Challenges</h1>
       {challenges.map((challenge, index) => (
         <div key={index}>
-          <h2 className = "ChallengeName">{challenge.name}</h2>
-          <p className = "ChallengeDesc">{challenge.description}</p>
+          <h2 className="ChallengeName">{challenge.name}</h2>
+          <p className="ChallengeDesc">{challenge.description}</p>
           {!challenge.accepted && (
             <button onClick={() => acceptChallenge(index)} className = "acceptButton">Accept</button>
           )}
