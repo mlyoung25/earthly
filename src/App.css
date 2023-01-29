@@ -25,6 +25,11 @@
   }
 }
 
+.overlay-image {
+  width: 50%; /* or any value in pixels or any other units */
+  height: 50%; /* or any value in pixels or any other units */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
