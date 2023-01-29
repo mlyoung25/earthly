@@ -26,7 +26,7 @@ export default function Auth() {
         <h1 className="header">Sign In</h1>
         <p className="description"></p>
         {loading ? (
-          'Verifying...'
+          <progress/>
         ) : (
           <form onSubmit={handleLogin}>
             <label htmlFor="email">Email</label>
