@@ -21,7 +21,7 @@ export default function Home() {
         }
         alert("Deleted trip")
         await getTrips()
-
+        await getAllTrips()
     }
     // const [data, setData] = useState({})
     let getTrips = async (everyone = false) => {
@@ -36,6 +36,7 @@ export default function Home() {
         // const id = await (await supabase.auth.getUser()).data.user.id
         const { data, error } = await supabase.from("trips")
             .select(`users ( id, email ), miles, created_at`)
+            .order('created_at', { ascending: false })
         setAllTrips(data)
     }
     useEffect(() => {
@@ -133,7 +134,7 @@ export default function Home() {
                         Recent Activity
                     </h1>
                     {allTrips.length == 0 ? <progress/> : 
-                    allTrips.slice(0,5).reverse().map(({miles, users, created_at}) => <div style={{paddingLeft: "15%", paddingRight: "15%"}}> <h6 style={{backgroundColor: "#18453b"}}>{users?.email} saved {conversions.co2(miles).toFixed(2)} pounds of CO2 with a {miles} mile trip on 
+                    allTrips.slice(0,5).map(({miles, users, created_at}) => <div style={{paddingLeft: "15%", paddingRight: "15%"}}> <h6 style={{backgroundColor: "#18453b"}}>{users?.email} saved {conversions.co2(miles).toFixed(2)} pounds of CO2 with a {miles} mile trip on 
                     <br></br>
                    <code> {new Date(created_at).toDateString() + " " + new Date(created_at).toLocaleTimeString() } </code></h6>
 </div>)}
