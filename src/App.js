@@ -31,7 +31,7 @@ function App() {
           <Nav>
             {session && <button onClick={logout}>Logout</button>}
           </Nav>
-          <article class="container">
+          <article className="container">
             {!session ? <Auth /> :
               <Routes>
                 {pages.map(({ location, comp }) =>

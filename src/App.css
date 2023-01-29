@@ -175,17 +175,8 @@ ol {
           filter: invert(.75);
 }
 
-.all-imgs {
-  display: flex;
+h6 {
+  padding: 25px;
+  border-radius: 15px;
 }
 
-.img-with-caption {
-  width: 50%; /* adjust as needed */
-  text-align: center;
-  margin-right: 50px;
-}
-
-.img-with-caption img {
-  width: 100%;
-  height: auto;
-}

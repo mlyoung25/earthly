@@ -9,7 +9,7 @@ export default function Friends() {
         <div>
             <main>
                 <h1>
-                    Weekly Leaderboard: 
+                    Local Leaderboard: 
                 </h1>
                 <div id="podium">
                     <div className="step" id="second">
