@@ -20,6 +20,7 @@ export default function Friends() {
                         <img src="/imgs/3rd-place-svgrepo-com.svg" class="overlay-image"></img>
                     </div>
                 </div>
+                <div id="horizontal-bar"></div>
             </main>
     </div>)
 }

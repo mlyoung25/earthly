@@ -99,6 +99,14 @@
 #third {
   height: 175px;
 }
+
+#horizontal-bar {
+  width: 100%; /* sets the width of the bar to take up the full width of its parent container */
+  height: 5px; /* sets the height of the bar */
+  background-color: white; /* sets the background color of the bar */
+  margin-top: 20px;
+}
+
 /* end podium */
 
 
