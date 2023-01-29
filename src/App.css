@@ -25,6 +25,11 @@
   }
 }
 
+.overlay-image {
+  width: 50%; /* or any value in pixels or any other units */
+  height: 50%; /* or any value in pixels or any other units */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -88,12 +93,24 @@
 }
 
 #second {
-  height: 200px;
+  height: 225px;
 }
 
 #third {
-  height: 100px;
+  height: 175px;
 }
+
+#horizontal-bar {
+  width: 100%; /* sets the width of the bar to take up the full width of its parent container */
+  height: 5px; /* sets the height of the bar */
+  background-color: white; /* sets the background color of the bar */
+  margin-top: 20px;
+}
+
+ol {
+  list-style-position: inside;
+}
+
 /* end podium */
 
 /* begin challenge */
@@ -152,3 +169,23 @@
   
 
 /* end challenge */
+
+.svg{ 
+  -webkit-filter: invert(.75); /* safari 6.0 - 9.0 */
+          filter: invert(.75);
+}
+
+.all-imgs {
+  display: flex;
+}
+
+.img-with-caption {
+  width: 50%; /* adjust as needed */
+  text-align: center;
+  margin-right: 50px;
+}
+
+.img-with-caption img {
+  width: 100%;
+  height: auto;
+}
