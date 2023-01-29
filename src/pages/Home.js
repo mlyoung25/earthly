@@ -30,10 +30,13 @@ export default function Home() {
         setTotal(data.map(({ miles }) => miles).reduce((partialSum, a) => partialSum + a, 0))
         setTrips(() => data)
     }
+
+    
     let getAllTrips = async (everyone=true) => {
-        const id = await (await supabase.auth.getUser()).data.user.id
-        const { data, error } = await supabase.from("trips").select()[everyone? "neq" : "eq"]("uuid",id)
-        setAllTrips(() => data)
+        // const id = await (await supabase.auth.getUser()).data.user.id
+        const { data, error } = await supabase.from("trips")
+            .select(`users ( id, email ), miles, created_at`)
+        setAllTrips(data)
     }
     useEffect(() => {
         async function init() {
@@ -63,6 +66,7 @@ export default function Home() {
             alert("Created trip")
         }
         await getTrips() // refresh with new trips
+        await getAllTrips()
     }
     return (<div>
         <body>
@@ -117,7 +121,7 @@ export default function Home() {
                     <h1>
                         History:
                     </h1>
-                    {trips.map((trip) => <div style={{ paddingLeft: "15%", paddingRight: "15%" }}>
+                    {trips.reverse().map((trip) => <div style={{ paddingLeft: "15%", paddingRight: "15%" }}>
                         <h6 style={{ backgroundColor: "#18453b" }}>
                             {trip.miles} miles on {new Date(trip.created_at).toDateString() + " " + new Date(trip.created_at).toLocaleTimeString()}
                         </h6>
@@ -128,9 +132,10 @@ export default function Home() {
                     <h1>
                         Recent Activity:
                     </h1>
-                    {allTrips.slice(0,5).reverse().map((trip) => <div style={{paddingLeft: "15%", paddingRight: "15%"}}> <h6 style={{backgroundColor: "#18453b"}}>uuid saved {conversions.co2(trip.miles).toFixed(2)} pounds of CO2 with a {trip.miles} mile trip on 
+                    {allTrips.length == 0 ? <progress/> : 
+                    allTrips.slice(0,5).reverse().map(({miles, users, created_at}) => <div style={{paddingLeft: "15%", paddingRight: "15%"}}> <h6 style={{backgroundColor: "#18453b"}}>{users?.email} saved {conversions.co2(miles).toFixed(2)} pounds of CO2 with a {miles} mile trip on 
                     <br></br>
-                    {new Date(trip.created_at).toDateString() + " " + new Date(trip.created_at).toLocaleTimeString() }</h6>
+                   <code> {new Date(created_at).toDateString() + " " + new Date(created_at).toLocaleTimeString() } </code></h6>
 </div>)}
 </div>
                      </main>
