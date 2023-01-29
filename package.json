@@ -1,8 +1,7 @@
 {
   "name": "client",
-  "version": "0.1.0",
-  "homepage": ".",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "dependencies": {
     "@supabase/supabase-js": "^2.5.0",
     "@testing-library/jest-dom": "^5.16.5",

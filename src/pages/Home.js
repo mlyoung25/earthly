@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
                 <article style={{ backgroundColor: "#18453B" }}  >
                     <p style={{ fontSize: "30px" }}>
-                        Thats equal to {(conversions.co2(total) / 22).toFixed(1)} trees worth of CO2
+                        That's equal to {(conversions.co2(total) / 22).toFixed(1)} trees worth of CO2
                     </p>
 
                     <img src="/imgs/forest-trees-5075.svg" height="auto" alt="Trees">
