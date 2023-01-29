@@ -1,5 +1,4 @@
 import '../App.css';
-import ChallengeSection from '../comps/ChallengeButton'
 export default function Challenges() {
     const tempval = 50;
     return (<div>
@@ -16,7 +15,14 @@ export default function Challenges() {
                     Weekly
                 </p>
                 <progress value={tempval} max="100"></progress>
-                
+                <p>
+                    Monthly
+                </p>
+                <progress value={tempval} max="100"></progress>
+                <p>
+                    COMMUNITY
+                </p>
+                <progress value={tempval} max="100"></progress>
 
 
                 <img src="/imgs/forest-trees-5075.svg" height="auto" alt="Trees">
@@ -30,15 +36,13 @@ export default function Challenges() {
                 </div>
                 <div>
                     <h3> Weekly Challenge </h3>
-                    <img src="/imgs/steak-4-svgrepo-com.svg" height="70%" width="70%" alt="Pounds of Beef" />
                 </div>
                 <div>
                     <h3> Monthly Challenge </h3>
-                    <img src="/imgs/Airplane_silhouette.svg" height="70%" width="70%" alt="Flights" />
                 </div>
                 <div>
                     <h3> Community Challenge </h3>
-                    <img src="/imgs/gas-station-svgrepo-com.svg" height="70%" width="70%" alt="Gallon of Gas" />
+                    <img src="/imgs/green-foot-print.svg" height="70%" width="70%" alt="Gallon of Gas" />
                 </div>
             </div>
         </main>
