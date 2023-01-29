@@ -14,7 +14,7 @@ import pages from './pages/routes';
 
 function App() {
   const [session, setSession] = useState(null)
-
+  const logout = () => supabase.auth.signOut().then(() => setSession(null))
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session)
@@ -28,12 +28,16 @@ function App() {
     <Router>
       <div className="App">
         <main className="container">
-          <Nav />
+          <Nav>
+            {session && <button onClick={logout}>Logout</button>}
+          </Nav>
           <article class="container">
-            <Routes>
-              {pages.map(({ location, comp }) =>
-                <Route exact element={comp} path={'/' + location.split('/').pop()} />)}
-            </Routes>
+            {!session ? <Auth /> :
+              <Routes>
+                {pages.map(({ location, comp }) =>
+                  <Route exact element={comp} path={'/' + location.split('/').pop()} />)}
+              </Routes>
+            }
           </article>
         </main>
       </div>
